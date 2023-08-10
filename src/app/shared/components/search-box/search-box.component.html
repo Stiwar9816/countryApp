@@ -1,7 +1,13 @@
-<input
-  type="text"
-  class="form-control my-2"
-  [placeholder]="placeholder"
-  (keyup.enter)="emitValue(txtSearchInput.value)"
-  #txtSearchInput
-/>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="search-input">🔍</span>
+
+  <input
+    type="text"
+    class="form-control"
+    [placeholder]="placeholder"
+    [value]="initialValue"
+    (keyup)="onKeyPress(txtSearchInput.value)"
+    aria-describedby="search-input"
+    #txtSearchInput
+  />
+</div>
